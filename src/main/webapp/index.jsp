@@ -12,8 +12,12 @@
 </head>
 <body>
 
-Velkommen til din online indkøbsliste.
+<h2> Velkommen til din online indkøbsliste. <h2>
+ <br>
+ <br>
+ <br>
 
+${requestScope.besked}
 
 
 <form action="LogInServlet" method="post">
