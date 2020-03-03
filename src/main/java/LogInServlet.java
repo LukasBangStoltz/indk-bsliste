@@ -20,8 +20,11 @@ public class LogInServlet extends HttpServlet {
     if(servletContext.getAttribute("brugerMap") ==null){
         Map<String,String> brugerMap = new HashMap<>();
         brugerMap.put("test","test");
+        brugerMap.put("admin", "1234");
         servletContext.setAttribute("brugerMap",brugerMap);
     }
+
+
     if( !( (Map<String,String>)  servletContext.getAttribute("brugerMap")  ).containsKey(navn) ){
         //todo gå til loginside
         request.setAttribute("besked", "Brugernavnet eksisterer ikke! Opret dig");
@@ -30,8 +33,12 @@ public class LogInServlet extends HttpServlet {
     }
 
     if(( (Map<String, String>)servletContext.getAttribute("brugerMap")  ).get(navn).equalsIgnoreCase(kodeord)){
-        //todo gå til huskelisten
 
+        if(navn.equalsIgnoreCase("admin")){
+
+            //todo gå til adminside
+            request.getRequestDispatcher("WEB-INF/admin.jsp").forward(request,response);
+        }
         request.getRequestDispatcher("WEB-INF/HuskeListe.jsp").forward(request,response);
     }
 
