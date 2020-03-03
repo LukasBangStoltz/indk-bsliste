@@ -11,7 +11,7 @@
     <title>Opret bruger</title>
 </head>
 <body>
-Her kan du registrere dig som bruger på huskelisten
+Her kan du registrere dig som bruger på webshoppen
 <br>
 <br>
 <br>

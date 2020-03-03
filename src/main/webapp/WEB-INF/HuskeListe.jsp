@@ -8,9 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>HuskeListe</title>
+    <title>Indkøbskurv</title>
 </head>
 <body>
-<h1> Du er nu på din huskeliste, og er klar til at tilføje emner</h1>
+<h1> Du kan nu tilføje emner til din indkøbskurv</h1>
 </body>
 </html>
